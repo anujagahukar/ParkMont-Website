@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="x-icon" href="images/favicon-02.png" />
+    <title>Parkmont IT & Infra Pvt.Ltd</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <script type="text/javascript" src="./main.js"></script>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar-overlay" onclick="toggleMenuOpen()"></div>
+
+      <button type="button" class="navbar-burger" onclick="toggleMenuOpen()">
+        <span class="material-icons">menu</span>
+      </button>
+      <a href="#" class="nav__logo">
+        <img
+          class="image-class"
+          src="images/logo1.jpeg"
+          width="200"
+          height="50"
+          alt="Logo"
+        />
+      </a>
+      <nav class="navbar-menu">
+        <button type="button" onclick="location.href='index.html';">
+          Home
+        </button>
+        <button
+          type="button"
+          class="active"
+          onclick="location.href='about.html';"
+        >
+          About us
+        </button>
+        <button type="button" onclick="location.href='solution.html';">
+          Solutions
+        </button>
+        <button type="button" onclick="location.href='contact.html';">
+          Contact Us
+        </button>
+      </nav>
+    </nav>
+
+    <div class="container-form">
+      <div class="form-container">
+        <h1>Contact Us</h1>
+        <form id="contactForm">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required />
+            <span class="error-message" id="nameError"
+              >Please enter your name.</span
+            >
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+            <span class="error-message" id="emailError"
+              >Please enter a valid email address.</span
+            >
+          </div>
+          <div class="form-group">
+            <label for="contactNo">Contact No</label>
+            <input type="tel" id="contactNo" name="contactNo" required />
+            <span class="error-message" id="contactNoError"
+              >Please enter your contact number.</span
+            >
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <span class="error-message" id="messageError"
+              >Please enter your message.</span
+            >
+          </div>
+          <button type="submit" id="button" value="Send Email">Send</button>
+        </form>
+      </div>
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.197996220675!2d73.7763499741707!3d18.565110267814248!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf798102899f%3A0xfce9b6bc6b273370!2sPrabhavee%20Tech%20Park!5e0!3m2!1sen!2sin!4v1724751741153!5m2!1sen!2sin"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="footer-section logo-section">
+        <img src="images/favicon-02.png" alt="Website Logo" width="150px" />
+      </div>
+      <div class="footer-section nav-section">
+        <h2>Quick Links</h2>
+        <ul class="footer-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="solution.html">Solutions</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-section contact-section">
+        <h2>Contact Details</h2>
+        <p>Phone: <a href="tel:+91-2069125600">+91-2069125600</a></p>
+        <p>
+          Email: <a href="mailto:sales@parkmont.co.in">sales@parkmont.co.in</a>
+        </p>
+        <p>
+          Address: Office No. 601 Wing B, Prabhavee Tech Park, Survey No. 125,
+          Baner Gaon, Haveli, Pune - 411045, Maharashtra, India
+        </p>
+      </div>
+    </footer>
+
+    <section class="certificates">
+      <div class="h2">Our Certifications</div>
+      <div class="certificate-container">
+        <img src="certificate/certificate1.jpg" alt="ISO Certificate 1" />
+        <img src="certificate/certificate3.jpg" alt="ISO Certificate 2" />
+        <img src="certificate/certificate4.jpg" alt="ISO Certificate 3" />
+        <img src="certificate/certificate5.jpg" alt="ISO Certificate 4" />
+      </div>
+    </section>
+
+    <div class="footer-bottom">
+      <div class="copyright">
+        <p>&copy; 2024 Parkmont IT & Infra Pvt.Ltd. All rights reserved.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#terms">Terms & Conditions</a> |
+        <a href="#privacy">Privacy Policy</a>
+      </div>
+    </div>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+
+    <script type="text/javascript">
+      emailjs.init("OAEKrDReN-_mSEQXk");
+
+      const btn = document.getElementById("button");
+
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          btn.value = "Sending...";
+
+          const serviceID = "service_oayzcoz";
+          const templateID = "template_1gl5gzk";
+
+          emailjs.sendForm(serviceID, templateID, this).then(
+            () => {
+              btn.value = "Send Email";
+              alert("Sent!");
+            },
+            (err) => {
+              btn.value = "Send Email";
+              alert(JSON.stringify(err));
+            }
+          );
+        });
+    </script>
+  </body>
+</html>

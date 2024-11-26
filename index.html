@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navbar 1</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link href="./styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar-overlay" onclick="toggleMenuOpen()"></div>
+
+      <button type="button" class="navbar-burger" onclick="toggleMenuOpen()">
+        <span class="material-icons">menu</span>
+      </button>
+      <a href="#" class="nav__logo">
+        <img
+          class="image-class"
+          src="images/logo1.jpeg"
+          width="200"
+          height="50"
+          alt="Logo"
+        />
+      </a>
+      <nav class="navbar-menu">
+        <button type="button" onclick="location.href='index.html';">
+          Home
+        </button>
+        <button
+          type="button"
+          class="active"
+          onclick="location.href='about.html';"
+        >
+          About us
+        </button>
+        <button type="button">Solutions</button>
+        <button type="button">Contact Us</button>
+      </nav>
+    </nav>
+
+    <div class="video-container">
+      <video controls muted autoplay>
+        <source src="videos/vid3.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <div class="full-screen-section">
+      <div class="content-wrapper">
+        <div class="image-side">
+          <img src="images/img2.jpeg" alt="Descriptive Image Text" />
+        </div>
+        <div class="data-side">
+          <div class="section-header">
+            <h1>Why Parkmont?</h1>
+          </div>
+          <div class="section-content">
+            <h2>Parkmont IT & Infra pvt. ltd</h2>
+            <p>
+              A ParkMont Parking Solution simplifies the management of a parking
+              lot using a combination of the latest hardware and software
+              technologies, ParkMont parking management solution has multiple
+              unique user applications. Whether you’re in the final stages of
+              constructing your establishment or an existing community, we will
+              provide you with services tailored to your needs.Our approach is
+              simple – leverage the technology to minimize user-driven errors
+              and provide a seamless experience to our patrons without
+              compromising on your security and revenue! It eliminates the
+              old-fashioned manual processes and allows customers to use
+              RFID-enabled tags for making parking payments that are
+              automatically deducted without vehicles having to stop.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <h1 class="main-heading">
+        Parkmont Benefits<br />
+        "Leading with Excellence"
+      </h1>
+      <div class="cards">
+        <div class="card">
+          <h2 class="card-heading">Superior Service</h2>
+          <p class="card-data">
+            "Our extensive experience and deep insight of car parking dynamics
+            helps us to improve customer experience".
+          </p>
+        </div>
+        <div class="card">
+          <h2 class="card-heading">Innovative Technology</h2>
+          <p class="card-data">
+            "Parkmont IT and Infra have its own R & D , To deliver different
+            innovative technology in Parking Automation Industry".
+          </p>
+        </div>
+        <div class="card">
+          <h2 class="card-heading">End-to-end Service</h2>
+          <p class="card-data">
+            "Parkmont IT Provide end to end solutions for Parking Management
+            System".
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="offering-container">
+      <h1 class="offering-heading">Our Offering</h1>
+      <div class="offering-grid">
+        <div class="offering-item">
+          <div class="offering-icon">
+            <img src="icons/house_.png" alt="Icon 1" />
+          </div>
+          <p class="offering-name">Residents</p>
+        </div>
+        <div class="offering-item">
+          <div class="offering-icon">
+            <img src="icons/buildings-fill_.png" alt="Icon 2" />
+          </div>
+          <p class="offering-name">Commercials</p>
+        </div>
+        <div class="offering-item">
+          <div class="offering-icon">
+            <img src="icons/commercial_.png" alt="Icon 3" />
+          </div>
+          <p class="offering-name">Housing Societies</p>
+        </div>
+        <div class="offering-item">
+          <div class="offering-icon">
+            <img src="icons/city_.png" alt="Icon 4" />
+          </div>
+          <p class="offering-name">Smart Cities</p>
+        </div>
+        <div class="offering-item">
+          <div class="offering-icon">
+            <img src="icons/car.png" alt="Icon 5" />
+          </div>
+          <p class="offering-name">Parking Operators</p>
+        </div>
+        <div class="offering-item">
+          <div class="offering-icon">
+            <img src="icons/charger.png" alt="Icon 6" />
+          </div>
+          <p class="offering-name">Electric Vehicles</p>
+        </div>
+        <div class="offering-item">
+          <div class="offering-icon">
+            <img src="icons/valet-parking.png" alt="Icon 7" />
+          </div>
+          <p class="offering-name">Valet Parking</p>
+        </div>
+        <div class="offering-item">
+          <div class="offering-icon">
+            <img src="icons/corporate.png" alt="Icon 8" />
+          </div>
+          <p class="offering-name">Corporates</p>
+        </div>
+        <div class="offering-item">
+          <div class="offering-icon">
+            <img src="icons/bank.png" alt="Icon 9" />
+          </div>
+          <p class="offering-name">Government</p>
+        </div>
+        <div class="offering-item">
+          <div class="offering-icon">
+            <img src="icons/apartment.png" alt="Icon 10" />
+          </div>
+          <p class="offering-name">IT Park</p>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="footer-section logo-section">
+        <img src="images/favicon-02.png" alt="Website Logo" width="150px" />
+      </div>
+      <div class="footer-section nav-section">
+        <h2>Quick Links</h2>
+        <ul class="footer-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="solution.html">Solutions</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-section contact-section">
+        <h2>Contact Details</h2>
+        <p>Phone: <a href="tel:+91-2069125600">+91-2069125600</a></p>
+        <p>
+          Email: <a href="mailto:sales@parkmont.co.in">sales@parkmont.co.in</a>
+        </p>
+        <p>
+          Address: Office No. 601 Wing B, Prabhavee Tech Park, Survey No. 125,
+          Baner Gaon, Haveli, Pune - 411045, Maharashtra, India.
+        </p>
+      </div>
+    </footer>
+
+    <section class="certificates">
+      <div class="h2">Our Certifications</div>
+      <div class="certificate-container">
+        <img src="certificate/certificate1.jpg" alt="ISO Certificate 1" />
+        <img src="certificate/certificate3.jpg" alt="ISO Certificate 2" />
+        <img src="certificate/certificate4.jpg" alt="ISO Certificate 3" />
+        <img src="certificate/certificate5.jpg" alt="ISO Certificate 4" />
+      </div>
+    </section>
+
+    <div class="footer-bottom">
+      <div class="copyright">
+        <p>&copy; 2024 Parkmont IT & Infra Pvt.Ltd. All rights reserved.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#terms">Terms & Conditions</a> |
+        <a href="#privacy">Privacy Policy</a>
+      </div>
+    </div>
+    <script type="text/javascript" src="./main.js"></script>
+  </body>
+</html>
